@@ -1,4 +1,4 @@
-package eventHandling;
+package awt_eventHandling;
 import java.awt.Button;
 import java.awt.Color;
 import java.awt.Frame;

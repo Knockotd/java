@@ -1,4 +1,4 @@
-package eventHandling;
+package awt_eventHandling;
 
 public class Main {
 
