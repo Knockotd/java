@@ -1,4 +1,4 @@
-//MS949파일
+
 package bytestream;
 
 import java.io.FileReader;

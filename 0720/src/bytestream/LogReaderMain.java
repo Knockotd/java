@@ -3,6 +3,7 @@ package bytestream;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,33 +14,34 @@ public class LogReaderMain {
 		BufferedReader brr = null;
 		try {
 			brr = new BufferedReader(new FileReader("C:\\Users\\503-26\\Desktop\\access_log.txt"));
-			//Á¢¼ÓÇÑ ¾ÆÀÌÇÇ¸¦ Áßº¹ »ó°ü¾øÀÌ ÀúÀåÇÏ±â À§ÇÑ ÀÚ·á±¸Á¶
-			ArrayList<String> iplist = new ArrayList<>();//Áßº¹»ó°ü¾øÀÌ ÀúÀå
+			// ì ‘ì†í•œ ì•„ì´í”¼ë¥¼ ì¤‘ë³µ ìƒê´€ì—†ì´ ì €ì¥í•˜ê¸° ìœ„í•œ ìë£Œêµ¬ì¡°
+			ArrayList<String> iplist = new ArrayList<>();// ì¤‘ë³µìƒê´€ì—†ì´ ì €ì¥
 			Set<String> s = new HashSet<String>();
-			while(true) {
+			while (true) {
 				String line = brr.readLine();
-				//System.out.println(line);
-				//ÀĞÀº µ¥ÀÌÅÍ ¾øÀ¸¸é Á¾·á
-				if(line == null) break;
-				//°ø¹éÀ¸·Î ºĞÇÒ
-				String [] ar = line.split(" ");
+				// System.out.println(line);
+				// ì½ì€ ë°ì´í„° ì—†ìœ¼ë©´ ì¢…ë£Œ
+				if (line == null)
+					break;
+				// ê³µë°±ìœ¼ë¡œ ë¶„í• 
+				String[] ar = line.split(" ");
 				s.add(ar[0]);
-						iplist.add(ar[0]);
-				//		System.out.println(iplist);
+				iplist.add(ar[0]);
+				// System.out.println(iplist);
 			}
-		/*	for(String imsi : iplist) {
-				System.out.println(imsi);
-			}*/
-			for(String temp : s) {
+			/*
+			 * for(String imsi : iplist) { System.out.println(imsi); }
+			 */
+			for (String temp : s) {
 				System.out.println(temp);
 			}
 			System.out.println(iplist);
-		}catch(Exception e) {
-		System.out.println("¿À·ù: " + e.getMessage());	
-		}finally {
+		} catch (Exception e) {
+			System.out.println("ì˜¤ë¥˜: " + e.getMessage());
+		} finally {
 			try {
-				if(brr != null)
-				brr.close();
+				if (brr != null)
+					brr.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
