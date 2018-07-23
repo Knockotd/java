@@ -4,7 +4,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-public class MainForSerializble_Member {
+public class MainForSerializble_Member_Output {
 
 	public static void main(String[] args) {
 		// 객체 단위로 데이터를 기록할 수 있는 클래스의 변수 선언
