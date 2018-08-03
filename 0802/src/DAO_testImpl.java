@@ -184,7 +184,7 @@ public class DAO_testImpl implements DAO_test {
 
 	@Override
 	public List<DTO_test> allreadTest() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
